@@ -1,27 +1,36 @@
-.row__posts {
+.row {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.row__posters {
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
+  scroll-behavior: smooth;
   padding: 20px;
 }
 
-.row__posts::-webkit-scrollbar {
-  /* width: 0;
-  background: transparent; */
+.row__posters::-webkit-scrollbar {
   display: none;
 }
 
-.row__posts-img {
-  object-fit: contain;
+.row__poster {
   width: 100%;
+  object-fit: contain;
   max-height: 100px;
+  margin-right: 10px;
   transition: transform 450ms;
 }
 
-.row__posts-img:not(:last-child) {
-  margin-right: 10px;
+.row__poster--large {
+  max-height: 250px;
 }
 
-.row__posts-img:hover {
+.row__poster:hover {
   transform: scale(1.08);
+}
+
+.row__poster--large :hover {
+  transform: scale(1.09);
 }
